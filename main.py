@@ -2,6 +2,7 @@ import sys
 from scrapy.selector import Selector as sel
 import requests
 import json
+from multiprocessing import Pool
 
 def extract_meta(uri):
     text = requests.get(uri).text
